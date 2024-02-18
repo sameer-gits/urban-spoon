@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Account {
-  id                String  @id @default(cuid())
+  id                String  @id @default(uuid())
   userId            String  @map("user_id")
   type              String
   provider          String
@@ -31,7 +31,7 @@ model Account {
 }
 
 model Session {
-  id           String   @id @default(cuid())
+  id           String   @id @default(uuid())
   sessionToken String   @unique @map("session_token")
   userId       String   @map("user_id")
   expires      DateTime
@@ -50,7 +50,7 @@ model VerificationToken {
 }
 
 model Authenticator {
-  id                   String  @id @default(cuid())
+  id                   String  @id @default(uuid())
   credentialID         String  @unique
   userId               String
   providerAccountId    String
@@ -73,7 +73,7 @@ model Url {
 }
 
 model User {
-  id            String          @id @default(cuid())
+  id            String          @id @default(uuid())
   name          String?
   email         String?         @unique
   emailVerified DateTime?       @map("email_verified")
