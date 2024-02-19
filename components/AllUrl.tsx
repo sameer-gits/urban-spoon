@@ -36,8 +36,7 @@ export default async function Posts() {
               href={`./${url.shortUrl}`}
               className="text-2xl font-bold break-all"
             >
-              https://urban-spoon-git-main-sameer-gits-projects.vercel.app/
-              {url.shortUrl}
+              https://urban-spoon-xi.vercel.app/{url.shortUrl}
             </Link>
             <p className="text-white/30 break-all">{url.click}</p>
           </div>
