@@ -25,7 +25,7 @@ export default async function Posts() {
         .map((url) => (
           <div
             key={url.id}
-            className="w-full gap-4 flex-col flex bg-slate-900 rounded-md"
+            className="w-full gap-4 flex-col flex bg-slate-900 rounded-md p-4"
           >
             {/* Accessing the id of each url */}
             {/* <p>{currentUser!.name}</p> */}
@@ -35,7 +35,7 @@ export default async function Posts() {
             <Link href={`${url.longUrl}`} className="text-white/50 break-all">
               {url.longUrl}
             </Link>
-            <p className="text-white/30 break-all">{url.click}</p>
+            <p className="text-white/30 break-all">Total Clicks: {url.click}</p>
           </div>
         ))}
     </div>
