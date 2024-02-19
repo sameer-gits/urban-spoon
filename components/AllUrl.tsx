@@ -17,25 +17,30 @@ export default async function Posts() {
 
   return (
     <div className="grid gap-4 my-8 w-full">
-      {currentUser!.urls.map((url) => (
-        <div key={url.id} className="w-full gap-4 flex-col flex">
-          {/* Accessing the id of each url */}
-          <p>{currentUser!.name}</p> {/* Displaying the user's id */}
-          <Link
-            href={`${url.longUrl}`}
-            className="text-2xl font-bold break-all"
-          >
-            {url.longUrl}
-          </Link>
-          <Link
-            href={`./${url.shortUrl}`}
-            className="text-2xl font-bold break-all"
-          >
-            http://localhost:3000/{url.shortUrl}
-          </Link>
-          <p className="text-white/30 break-all">{url.click}</p>
-        </div>
-      ))}
+      {currentUser!.urls
+        .sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        )
+        .map((url) => (
+          <div key={url.id} className="w-full gap-4 flex-col flex">
+            {/* Accessing the id of each url */}
+            <p>{currentUser!.name}</p> {/* Displaying the user's id */}
+            <Link
+              href={`${url.longUrl}`}
+              className="text-2xl font-bold break-all"
+            >
+              {url.longUrl}
+            </Link>
+            <Link
+              href={`./${url.shortUrl}`}
+              className="text-2xl font-bold break-all"
+            >
+              http://localhost:3000/{url.shortUrl}
+            </Link>
+            <p className="text-white/30 break-all">{url.click}</p>
+          </div>
+        ))}
     </div>
   );
 }

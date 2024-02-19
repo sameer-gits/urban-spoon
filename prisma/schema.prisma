@@ -64,12 +64,13 @@ model Authenticator {
 }
 
 model Url {
-  id       String @unique @default(uuid())
-  shortUrl String @unique @default(nanoid(11))
-  longUrl  String
-  click    Int    @default(0)
-  user     User   @relation(fields: [userId], references: [id])
-  userId   String
+  id        String   @unique @default(uuid())
+  shortUrl  String   @unique @default(nanoid(11))
+  longUrl   String
+  click     Int      @default(0)
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  createdAt DateTime @default(now())
 }
 
 model User {
