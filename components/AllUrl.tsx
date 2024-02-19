@@ -23,7 +23,10 @@ export default async function Posts() {
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
         )
         .map((url) => (
-          <div key={url.id} className="w-full gap-4 flex-col flex">
+          <div
+            key={url.id}
+            className="w-full gap-4 flex-col flex bg-slate-900 rounded-md"
+          >
             {/* Accessing the id of each url */}
             {/* <p>{currentUser!.name}</p> */}
             <Link href={`./${url.shortUrl}`} className="font-bold break-all">
