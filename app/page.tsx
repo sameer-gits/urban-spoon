@@ -1,18 +1,24 @@
 import AuthButton from "@/components/AuthButton";
-// import prisma from "@/lib/prisma";
-import { getServerSession } from "next-auth";
 import CreateUrl from "@/components/CreateUrl";
 import AllUrl from "@/components/AllUrl";
+import { getServerSession } from "next-auth";
 
 export default async function Home() {
   const session = await getServerSession();
-
-  console.log("hello" + session);
+  if (session) {
+    return (
+      <main className="flex min-h-screen flex-col items-center gap-5 p-24">
+        <CreateUrl />
+        <AllUrl />
+        <AuthButton />
+      </main>
+    );
+  }
   return (
-    <main className="flex min-h-screen flex-col items-center gap-5 p-24">
-      <CreateUrl />
-      <AllUrl />
-      <AuthButton />
-    </main>
+    <>
+      <main className="flex min-h-screen flex-col items-center gap-5 p-24">
+        <AuthButton />
+      </main>
+    </>
   );
 }
