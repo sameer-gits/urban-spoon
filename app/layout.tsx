@@ -7,7 +7,7 @@ import { getServerSession } from "next-auth";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Curly Fiesta Link Shortener",
+  title: "Urban Spoon Link Shortener",
   description: "Generate Short Link",
 };
 
