@@ -65,7 +65,7 @@ model Authenticator {
 
 model Url {
   id       String @unique @default(uuid())
-  shortUrl String @unique @default(nanoid())
+  shortUrl String @unique @default(nanoid(11))
   longUrl  String
   click    Int    @default(0)
   user     User   @relation(fields: [userId], references: [id])
