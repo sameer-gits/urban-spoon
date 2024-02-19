@@ -10,9 +10,8 @@ export default function CreateUrl() {
     <>
       <h1 className="text-3xl font-bold pt-10 md:text-4xl">Url Shortener</h1>
       <p className="text-white/30 pt-2 pb-10 text-center text-balance">
-        There is no Delete Button cause laziness, Thanks! <br />
-        Also Technically Short url are not short cause my demo domain name is
-        very big its just a demo
+        There is no Delete Button cause laziness, Thanks! Also Technically Short
+        url are not short cause my demo domain name is very big its just a demo
       </p>
       <form
         ref={ref}
