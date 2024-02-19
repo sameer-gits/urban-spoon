@@ -26,17 +26,11 @@ export default async function Posts() {
           <div key={url.id} className="w-full gap-4 flex-col flex">
             {/* Accessing the id of each url */}
             <p>{currentUser!.name}</p> {/* Displaying the user's id */}
-            <Link
-              href={`${url.longUrl}`}
-              className="text-2xl font-bold break-all"
-            >
-              {url.longUrl}
-            </Link>
-            <Link
-              href={`./${url.shortUrl}`}
-              className="text-2xl font-bold break-all"
-            >
+            <Link href={`./${url.shortUrl}`} className="font-bold break-all">
               https://urban-spoon-xi.vercel.app/{url.shortUrl}
+            </Link>
+            <Link href={`${url.longUrl}`} className="text-white/50 break-all">
+              {url.longUrl}
             </Link>
             <p className="text-white/30 break-all">{url.click}</p>
           </div>
