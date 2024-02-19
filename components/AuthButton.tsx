@@ -6,7 +6,7 @@ export default function Component() {
   const { data: session } = useSession();
   if (session) {
     return (
-      <>
+      <div className="flex">
         <p>Signed in as {session.user!.name}</p>
         <button
           className="px-4 p-2 mb-4 ml-auto font-bold bg-red-500 rounded-md"
@@ -14,7 +14,7 @@ export default function Component() {
         >
           Sign out
         </button>
-      </>
+      </div>
     );
   }
   return (
