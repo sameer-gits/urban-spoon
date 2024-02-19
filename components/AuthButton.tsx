@@ -19,7 +19,7 @@ export default function Component() {
   }
   return (
     <>
-      {" "}
+      <h1 className="text-3xl font-bold md:text-4xl">Url Shortener</h1>
       <p className="text-white/30 pt-2 text-center text-balance">
         Login Using Github! then start generating Short Urls Technically Short
         url are not short cause my demo domain name is very big its just a demo
