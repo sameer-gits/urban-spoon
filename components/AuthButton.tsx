@@ -21,7 +21,7 @@ export default function Component() {
     <>
       {" "}
       <p className="text-white/30 pt-2 text-center text-balance">
-        Login Using Github, that's it! then start generating Short Urls <br />
+        Login Using Github! then start generating Short Urls <br />
         Technically Short url are not short cause my demo domain name is very
         big its just a demo
       </p>
