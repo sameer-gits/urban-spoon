@@ -25,7 +25,7 @@ export default async function Posts() {
         .map((url) => (
           <div key={url.id} className="w-full gap-4 flex-col flex">
             {/* Accessing the id of each url */}
-            <p>{currentUser!.name}</p> {/* Displaying the user's id */}
+            {/* <p>{currentUser!.name}</p> */}
             <Link href={`./${url.shortUrl}`} className="font-bold break-all">
               https://urban-spoon-xi.vercel.app/{url.shortUrl}
             </Link>

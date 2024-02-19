@@ -7,9 +7,9 @@ export default function Component() {
   if (session) {
     return (
       <>
-        Signed in as {session.user!.name} <br />
+        Signed in as {session.user!.name}
         <button
-          className="px-4 p-2 font-bold bg-red-500 rounded-md"
+          className="px-4 p-2 mb-4 ml-auto font-bold bg-red-500 rounded-md"
           onClick={() => signOut()}
         >
           Sign out

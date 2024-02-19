@@ -8,9 +8,9 @@ export default async function Home() {
   if (session) {
     return (
       <main className="flex flex-col px-4 items-center justify-center min-h-screen max-w-4xl mx-auto">
+        <AuthButton />
         <CreateUrl />
         <AllUrl />
-        <AuthButton />
       </main>
     );
   }
