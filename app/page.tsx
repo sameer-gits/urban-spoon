@@ -7,7 +7,7 @@ export default async function Home() {
   const session = await getServerSession();
   if (session) {
     return (
-      <main className="flex min-h-screen flex-col items-center gap-5 p-2 max-w-4xl">
+      <main className="flex flex-col px-4 items-center justify-center min-h-screen max-w-4xl mx-auto">
         <CreateUrl />
         <AllUrl />
         <AuthButton />
@@ -16,7 +16,7 @@ export default async function Home() {
   }
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center gap-5 p-2 max-w-4xl">
+      <main className="flex flex-col px-4 items-center gap-4 justify-center min-h-screen max-w-4xl mx-auto">
         <AuthButton />
       </main>
     </>
