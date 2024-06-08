@@ -30,7 +30,7 @@ export default async function Posts() {
             {/* Accessing the id of each url */}
             {/* <p>{currentUser!.name}</p> */}
             <Link href={`./${url.shortUrl}`} className="font-bold break-all">
-              https://urban-spoon-xi.vercel.app/{url.shortUrl}
+              https://url-s.up.railway.app/{url.shortUrl}
             </Link>
             <Link href={`${url.longUrl}`} className="text-white/50 break-all">
               {url.longUrl}
